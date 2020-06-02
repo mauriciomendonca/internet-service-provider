@@ -1,0 +1,20 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-App<internet-service-provider_2ba4f8c>",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "internet-service-provider_2ba4f8c"
+    }
+  ]
+}
