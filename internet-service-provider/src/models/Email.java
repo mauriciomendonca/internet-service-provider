@@ -2,29 +2,29 @@ package models;
 
 public class Email {
     protected String remetente;
-    protected String destinatario; //Precisa ser array de destinatarios
+    protected String[] destinatarios;
     protected String assunto;
     protected String corpoDoEmail;
 
-    public void Email(String destinatario, String assunto, String corpoDoEmail) {
-        this.destinatario = destinatario;
+    public Email(String[] destinatarios, String assunto, String corpoDoEmail) {
+        this.destinatarios = destinatarios;
         this.assunto = assunto;
         this.corpoDoEmail = corpoDoEmail;
     }
 
-    public void Email(String remetente, String destinatario, String assunto, String corpoDoEmail) {
+    public Email(String remetente, String[] destinatarios, String assunto, String corpoDoEmail) {
         this.remetente = remetente;
-        this.destinatario = destinatario;
+        this.destinatarios = destinatarios;
         this.assunto = assunto;
         this.corpoDoEmail = corpoDoEmail;
     }
 
-    public String getDestinatario() {
-        return destinatario;
+    public String[] getDestinatarios() {
+        return destinatarios;
     }
 
-    public void setDestinatario(String destinatario) {
-        this.destinatario = destinatario;
+    public void setDestinatario(String[] destinatarios) {
+        this.destinatarios = destinatarios;
     }
 
     public String getAssunto() {
