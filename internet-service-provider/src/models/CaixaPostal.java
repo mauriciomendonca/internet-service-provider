@@ -37,7 +37,7 @@ public class CaixaPostal {
 
     public String showInbox() {
         String formatString = "";
-        for (Email e : caixaSaida) {
+        for (Email e : caixaEntrada) {
             if (e != null)
                 formatString += "Caixa de entrada: [Remetente: " + e.getRemetente() + " Assunto: " + e.getAssunto() + " Corpo: " + e.getCorpoDoEmail() + "]\n";
         }
