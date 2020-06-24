@@ -19,6 +19,14 @@ public class Email {
         this.corpoDoEmail = corpoDoEmail;
     }
 
+    public String getRemetente() {
+        return remetente;
+    }
+
+    public void setRemetente(String remetente) {
+        this.remetente = remetente;
+    }
+
     public String[] getDestinatarios() {
         return destinatarios;
     }
