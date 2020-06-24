@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Arrays;
+
 public class CaixaPostal {
     protected String nomeDono;
     protected Email[] caixaSaida;
@@ -36,11 +38,23 @@ public class CaixaPostal {
     }
 
     public String showInbox() {
-        String formatString = "";
+        String formatMessage = "";
         for (Email e : caixaEntrada) {
             if (e != null)
-                formatString += "Caixa de entrada: [Remetente: " + e.getRemetente() + " Assunto: " + e.getAssunto() + " Corpo: " + e.getCorpoDoEmail() + "]\n";
+                formatMessage += "Caixa de entrada: Remetente: " + e.getRemetente() + " | Assunto: " + e.getAssunto() + " | Corpo: " + e.getCorpoDoEmail() + "\n";
         }
-        return formatString;
+        return formatMessage;
+    }
+
+    public String showOutbox() {
+        String formatMessage = "";
+        for (Email e : caixaSaida) {
+            String destinatarios = "";
+            if (e != null) {
+                destinatarios += Arrays.toString(e.getDestinatarios());
+                formatMessage += "Caixa de saida: Destinatarios: " + destinatarios + " | Assunto: " + e.getAssunto() + " | Corpo: " + e.getCorpoDoEmail() + "\n";
+            }
+        }
+        return formatMessage;
     }
 }
